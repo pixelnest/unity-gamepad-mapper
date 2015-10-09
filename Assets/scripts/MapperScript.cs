@@ -21,12 +21,16 @@ public class MapperScript : MonoBehaviour
   private bool lookForAnalogs;
   private string result;
 
+  private float delayBetweenTwoAnalogs;
+
   void Start()
   {
     joystickId = -1;
     bindingIndex = -1;
 
     result = string.Empty;
+    result += Application.platform + "\r\n";
+    result += System.DateTime.Now + "\r\n";
   }
 
 
@@ -38,7 +42,11 @@ public class MapperScript : MonoBehaviour
     }
     else
     {
-      UpdateDeviceBinding();
+      delayBetweenTwoAnalogs -= Time.deltaTime;
+      if (delayBetweenTwoAnalogs <= 0f)
+      {
+        UpdateDeviceBinding();
+      }
     }
   }
 
@@ -57,6 +65,9 @@ public class MapperScript : MonoBehaviour
 
         // Launch binding UI
         ui.ShowMappings("#" + joystickId + " " + joystickName);
+
+        result += "Joystick" + joystickId + "\r\n";
+        result += joystickName + "\r\n";
 
         NextBinding();
       }
@@ -87,7 +98,7 @@ public class MapperScript : MonoBehaviour
     // Axes?
     if (lookForAnalogs)
     {
-      var analogs = CheckForAnalogs();
+      var analogs = CheckForAnalogs(joystickId);
       if (analogs.Count > 0)
       {
         binding = string.Empty;
@@ -96,12 +107,14 @@ public class MapperScript : MonoBehaviour
         {
           binding += "Joystick" + axes.Key + "Analog" + axes.Value + " ";
         }
+
+        delayBetweenTwoAnalogs = 0.75f;
       }
     }
     // Key?
     else
     {
-      var key = CheckForKey();
+      var key = CheckForKey(joystickId.ToString());
       if (key != KeyCode.None)
       {
         binding = key.ToString();
@@ -112,7 +125,7 @@ public class MapperScript : MonoBehaviour
     {
       ui.SetBindingValue(bindingIndex, binding);
 
-      result += string.Format("{0}\t=\t{1}\r\n", bindingHandle, binding);
+      result += string.Format("{0} = {1}\r\n", bindingHandle, binding);
 
       NextBinding();
     }
@@ -177,6 +190,14 @@ public class MapperScript : MonoBehaviour
         bindingHandle = "Left stick";
         lookForAnalogs = true;
         break;
+
+      default:
+        // Over
+        if (Export())
+        {
+          Application.Quit();
+        }
+        break;
     }
 
     ui.SetActiveBinding(bindingIndex, bindingHandle);
@@ -200,13 +221,15 @@ public class MapperScript : MonoBehaviour
     return KeyCode.None;
   }
 
-  private List<KeyValuePair<int, int>> CheckForAnalogs()
+  private List<KeyValuePair<int, int>> CheckForAnalogs(int joystickId = -1)
   {
     List<KeyValuePair<int, int>> analogs = new List<KeyValuePair<int, int>>();
 
     // A joystick is moving?
     for (int i = 1; i <= JOYSTICK_COUNT; i++)
     {
+      if (joystickId >= 0 && joystickId != i) continue;
+
       for (int a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
       {
         string s = string.Format("joystick {0} analog {1}", i, a);
@@ -224,5 +247,25 @@ public class MapperScript : MonoBehaviour
     }
 
     return analogs;
+  }
+
+  private bool Export()
+  {
+    Debug.Log("EXPORT Requested");
+
+    System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+    saveFileDialog.Title = "Save binding";
+    saveFileDialog.Filter = "Text file (.txt)|*.txt";
+
+    if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+    {
+      string filename = saveFileDialog.FileName;
+
+      System.IO.File.WriteAllText(filename, result);
+
+      return true;
+    }
+
+    return false;
   }
 }
