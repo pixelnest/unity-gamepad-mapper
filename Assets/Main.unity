@@ -98,7 +98,7 @@ GameObject:
   - 222: {fileID: 42385236}
   - 114: {fileID: 42385235}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,8 +118,8 @@ RectTransform:
   m_RootOrder: 21
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 14.7999573}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 14.7999573}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &42385235
 MonoBehaviour:
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -169,7 +169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &144923663
 RectTransform:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - 222: {fileID: 160877196}
   - 114: {fileID: 160877195}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,8 +247,8 @@ RectTransform:
   m_RootOrder: 17
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 142.399963}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 142.399963}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &160877195
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -293,7 +293,7 @@ GameObject:
   - 222: {fileID: 283955694}
   - 114: {fileID: 283955693}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Dup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +359,7 @@ GameObject:
   - 222: {fileID: 347324167}
   - 114: {fileID: 347324166}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value LT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,8 +379,8 @@ RectTransform:
   m_RootOrder: 23
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -47.8500175}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -47.8500175}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &347324166
 MonoBehaviour:
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -425,7 +425,7 @@ GameObject:
   - 222: {fileID: 394029601}
   - 114: {fileID: 394029600}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,8 +445,8 @@ RectTransform:
   m_RootOrder: 18
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 110.499931}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 110.499931}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &394029600
 MonoBehaviour:
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -491,7 +491,7 @@ GameObject:
   - 222: {fileID: 496980115}
   - 114: {fileID: 496980114}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value RT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,8 +511,8 @@ RectTransform:
   m_RootOrder: 22
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -15.9500122}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -15.9500122}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &496980114
 MonoBehaviour:
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -557,7 +557,7 @@ GameObject:
   - 222: {fileID: 537504562}
   - 114: {fileID: 537504561}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding LB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ GameObject:
   - 222: {fileID: 683604392}
   - 114: {fileID: 683604391}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Y
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,7 +689,7 @@ GameObject:
   - 222: {fileID: 738797612}
   - 114: {fileID: 738797611}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,7 +887,7 @@ GameObject:
   - 222: {fileID: 842911063}
   - 114: {fileID: 842911062}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding RT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,7 +953,7 @@ GameObject:
   - 222: {fileID: 858975106}
   - 114: {fileID: 858975105}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value DLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,8 +973,8 @@ RectTransform:
   m_RootOrder: 28
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -207.34993}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -207.34993}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &858975105
 MonoBehaviour:
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1085,7 +1085,7 @@ GameObject:
   - 222: {fileID: 1046316583}
   - 114: {fileID: 1046316582}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value Ddown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,8 +1105,8 @@ RectTransform:
   m_RootOrder: 27
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -175.449982}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -175.449982}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1046316582
 MonoBehaviour:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1151,7 +1151,7 @@ GameObject:
   - 222: {fileID: 1103311304}
   - 114: {fileID: 1103311303}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Dright
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1217,7 @@ GameObject:
   - 222: {fileID: 1221087725}
   - 114: {fileID: 1221087724}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,7 +1283,7 @@ GameObject:
   - 222: {fileID: 1267623714}
   - 114: {fileID: 1267623713}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,7 +1349,7 @@ GameObject:
   - 222: {fileID: 1297162310}
   - 114: {fileID: 1297162309}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Dleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,8 +1435,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 328, y: 226.299988}
-  m_SizeDelta: {x: 378.600006, y: 31.8999996}
+  m_AnchoredPosition: {x: 328, y: 222.199997}
+  m_SizeDelta: {x: 378.600006, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1333323055
 MonoBehaviour:
@@ -1450,10 +1450,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: .802999973, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press buttons in the following order
+  m_Text: "Press buttons in the following order. \nUse ESC to skip and R to restart"
 --- !u!222 &1333323056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1481,7 +1481,7 @@ GameObject:
   - 222: {fileID: 1345038647}
   - 114: {fileID: 1345038646}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,8 +1501,8 @@ RectTransform:
   m_RootOrder: 20
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 46.7000084}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 46.7000084}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1345038646
 MonoBehaviour:
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1547,7 +1547,7 @@ GameObject:
   - 222: {fileID: 1388619091}
   - 114: {fileID: 1388619090}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value DRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1567,8 +1567,8 @@ RectTransform:
   m_RootOrder: 29
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -239.249908}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -239.249908}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1388619090
 MonoBehaviour:
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1613,7 +1613,7 @@ GameObject:
   - 222: {fileID: 1414408889}
   - 114: {fileID: 1414408888}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value LB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1633,8 +1633,8 @@ RectTransform:
   m_RootOrder: 25
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -111.649994}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -111.649994}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1414408888
 MonoBehaviour:
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1719,7 +1719,7 @@ GameObject:
   - 222: {fileID: 1517273041}
   - 114: {fileID: 1517273040}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ GameObject:
   - 222: {fileID: 1625666439}
   - 114: {fileID: 1625666438}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,8 +1805,8 @@ RectTransform:
   m_RootOrder: 16
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 174.299988}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 174.249969}
+  m_SizeDelta: {x: 240, y: 32}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1625666438
 MonoBehaviour:
@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1851,7 +1851,7 @@ GameObject:
   - 222: {fileID: 1772583686}
   - 114: {fileID: 1772583685}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value Dup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1871,8 +1871,8 @@ RectTransform:
   m_RootOrder: 26
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.300049, y: -143.549957}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -143.549957}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1772583685
 MonoBehaviour:
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1917,7 +1917,7 @@ GameObject:
   - 222: {fileID: 1774713647}
   - 114: {fileID: 1774713646}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value Y
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1937,8 +1937,8 @@ RectTransform:
   m_RootOrder: 19
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: 78.6000137}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: 78.6000137}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1774713646
 MonoBehaviour:
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2114,6 +2114,37 @@ MonoBehaviour:
   startPanel: {fileID: 144923662}
   mappingPanel: {fileID: 2060399842}
   detectedDevicesLabel: {fileID: 2027114258}
+  currentDeviceLabel: {fileID: 768230927}
+  bindingsHandles:
+  - {fileID: 1517273040}
+  - {fileID: 1864700882}
+  - {fileID: 1221087724}
+  - {fileID: 683604391}
+  - {fileID: 1927735847}
+  - {fileID: 738797611}
+  - {fileID: 842911062}
+  - {fileID: 1969166186}
+  - {fileID: 1267623713}
+  - {fileID: 537504561}
+  - {fileID: 283955693}
+  - {fileID: 1886991632}
+  - {fileID: 1297162309}
+  - {fileID: 1103311303}
+  bindings:
+  - {fileID: 1625666438}
+  - {fileID: 160877195}
+  - {fileID: 394029600}
+  - {fileID: 1774713646}
+  - {fileID: 1345038646}
+  - {fileID: 42385235}
+  - {fileID: 496980114}
+  - {fileID: 347324166}
+  - {fileID: 2114964968}
+  - {fileID: 1414408888}
+  - {fileID: 1772583685}
+  - {fileID: 1046316582}
+  - {fileID: 858975105}
+  - {fileID: 1388619090}
 --- !u!114 &1856833330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2152,7 +2183,7 @@ GameObject:
   - 222: {fileID: 1864700883}
   - 114: {fileID: 1864700882}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2218,7 +2249,7 @@ GameObject:
   - 222: {fileID: 1886991633}
   - 114: {fileID: 1886991632}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Ddown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2284,7 +2315,7 @@ GameObject:
   - 222: {fileID: 1927735848}
   - 114: {fileID: 1927735847}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2469,7 @@ GameObject:
   - 222: {fileID: 1969166187}
   - 114: {fileID: 1969166186}
   m_Layer: 5
-  m_Name: Text - binding
+  m_Name: Text - binding LT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2649,7 +2680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2060399843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2735,7 +2766,7 @@ GameObject:
   - 222: {fileID: 2114964969}
   - 114: {fileID: 2114964968}
   m_Layer: 5
-  m_Name: Text - binding value
+  m_Name: Text - binding value RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2755,8 +2786,8 @@ RectTransform:
   m_RootOrder: 24
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -125.299988, y: -79.7499924}
-  m_SizeDelta: {x: 145.799988, y: 31.8999996}
+  m_AnchoredPosition: {x: -170, y: -79.7499924}
+  m_SizeDelta: {x: 240, y: 31.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2114964968
 MonoBehaviour:
@@ -2773,7 +2804,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
