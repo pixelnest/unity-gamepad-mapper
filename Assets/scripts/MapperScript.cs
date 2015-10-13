@@ -53,7 +53,7 @@ public class MapperScript : MonoBehaviour
       }
     }
 
-    if (lookForAnalogs == false)
+    if (lookForAnalogs == false || delayBetweenTwoAnalogs > 1f)
     {
       UpdateAnalogValues();
     }
