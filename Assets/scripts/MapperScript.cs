@@ -251,21 +251,12 @@ public class MapperScript : MonoBehaviour
 
   private bool Export()
   {
-    Debug.Log("EXPORT Requested");
+    string filename = "./" + joystickName + ".txt";
 
-    System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-    saveFileDialog.Title = "Save binding";
-    saveFileDialog.Filter = "Text file (.txt)|*.txt";
+    Debug.Log("EXPORT at " + filename);
 
-    if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-    {
-      string filename = saveFileDialog.FileName;
+    System.IO.File.WriteAllText(filename, result);
 
-      System.IO.File.WriteAllText(filename, result);
-
-      return true;
-    }
-
-    return false;
+    return true;
   }
 }
