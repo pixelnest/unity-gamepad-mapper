@@ -26,6 +26,9 @@ public class MapperScript : MonoBehaviour
   private Dictionary<string, float> initialAnalogValues;
   private float delayBetweenTwoAnalogs;
 
+  private List<string> bindingsUsed = new List<string>();
+  private bool allowDoublon;
+
   void Start()
   {
     joystickId = -1;
@@ -79,6 +82,7 @@ public class MapperScript : MonoBehaviour
         result += joystickName + "\r\n";
 
         // Next step
+        bindingsUsed.Clear();
         delayBetweenTwoAnalogs = 2f;
         NextBinding();
       }
@@ -134,11 +138,16 @@ public class MapperScript : MonoBehaviour
 
     if (string.IsNullOrEmpty(binding) == false)
     {
-      ui.SetBindingValue(bindingIndex, binding);
+      if (bindingsUsed.Contains(binding) == false || allowDoublon)
+      {
+        ui.SetBindingValue(bindingIndex, binding);
 
-      result += string.Format("{0} = {1}\r\n", bindingHandle, binding);
+        bindingsUsed.Add(binding);
 
-      NextBinding();
+        result += string.Format("{0} = {1}\r\n", bindingHandle, binding);
+
+        NextBinding();
+      }
     }
   }
 
@@ -209,18 +218,22 @@ public class MapperScript : MonoBehaviour
       case 11:
         bindingHandle = "DPad Up";
         lookForAnalogs = true;
+        allowDoublon = true;
         break;
       case 12:
         bindingHandle = "DPad Down";
         lookForAnalogs = true;
+        allowDoublon = true;
         break;
       case 13:
         bindingHandle = "DPad Left";
         lookForAnalogs = true;
+        allowDoublon = true;
         break;
       case 14:
         bindingHandle = "DPad Right";
         lookForAnalogs = true;
+        allowDoublon = true;
         break;
 
       default:
