@@ -79,6 +79,7 @@ public class MapperScript : MonoBehaviour
         result += joystickName + "\r\n";
 
         // Next step
+        delayBetweenTwoAnalogs = 2f;
         NextBinding();
       }
       catch (System.Exception)
@@ -170,55 +171,55 @@ public class MapperScript : MonoBehaviour
     switch (bindingIndex)
     {
       case 0:
-        bindingHandle = "A / Cross";
+        bindingHandle = "Leftstick";
+        lookForAnalogs = true;
         break;
       case 1:
-        bindingHandle = "B / Circle";
+        bindingHandle = "A / Cross";
         break;
       case 2:
-        bindingHandle = "X / Square";
+        bindingHandle = "B / Circle";
         break;
       case 3:
-        bindingHandle = "Y / Triangle";
+        bindingHandle = "X / Square";
         break;
       case 4:
-        bindingHandle = "Start";
+        bindingHandle = "Y / Triangle";
         break;
       case 5:
-        bindingHandle = "Back / Select";
+        bindingHandle = "Start";
         break;
       case 6:
+        bindingHandle = "Back / Select";
+        break;
+      case 7:
         bindingHandle = "RT / R2";
         lookForAnalogs = true;
         break;
-      case 7:
+      case 8:
         bindingHandle = "LT / L2";
         lookForAnalogs = true;
         break;
-      case 8:
+      case 9:
         bindingHandle = "RB / R1";
         break;
-      case 9:
+      case 10:
         bindingHandle = "LB / L1";
         break;
-      case 10:
+      case 11:
         bindingHandle = "DPad Up";
         lookForAnalogs = true;
         break;
-      case 11:
+      case 12:
         bindingHandle = "DPad Down";
         lookForAnalogs = true;
         break;
-      case 12:
+      case 13:
         bindingHandle = "DPad Left";
         lookForAnalogs = true;
         break;
-      case 13:
-        bindingHandle = "DPad Right";
-        lookForAnalogs = true;
-        break;
       case 14:
-        bindingHandle = "Left stick";
+        bindingHandle = "DPad Right";
         lookForAnalogs = true;
         break;
 
