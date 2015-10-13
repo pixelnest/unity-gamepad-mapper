@@ -8,15 +8,17 @@ using System;
 /// </summary>
 public class MapperUIScript : MonoBehaviour
 {
-  [Header("Panels")]
-  public GameObject startPanel;
-  public GameObject mappingPanel;
+  #region Constants
 
-  [Header("Misc")]
-  public Text detectedDevicesLabel;
+  private static readonly string INSTRUCTIONS_1 = "Press any button of a device to start.";
+  private static readonly string INSTRUCTIONS_2 = "Use ESC to skip and R to restart.\nPress the buttons in the following order:";
+
+  #endregion
+
+  public Text devicesLabel;
+  public Text instructionsLabel;
 
   [Header("Bindings")]
-  public Text currentDeviceLabel;
   public Text[] bindingsHandles;
   public Text[] bindings;
 
@@ -24,8 +26,7 @@ public class MapperUIScript : MonoBehaviour
 
   void Start()
   {
-    startPanel.SetActive(true);
-    mappingPanel.SetActive(false);
+    instructionsLabel.text = INSTRUCTIONS_1;
 
     foreach (var b in bindingsHandles)
     {
@@ -43,19 +44,18 @@ public class MapperUIScript : MonoBehaviour
   /// <param name="devices"></param>
   public void SetDetectedDevices(string[] devices)
   {
-    detectedDevicesLabel.text = string.Empty;
+    devicesLabel.text = "Detected: ";
+
     for (int i = 0; i < devices.Length; i++)
     {
-      detectedDevicesLabel.text += devices[i] + (i < devices.Length - 1 ? ", " : "");
+      devicesLabel.text += devices[i] + (i < devices.Length - 1 ? ", " : "");
     }
   }
 
   public void ShowMappings(string deviceId)
   {
-    startPanel.SetActive(false);
-    mappingPanel.SetActive(true);
-
-    currentDeviceLabel.text = deviceId;
+    devicesLabel.text = deviceId;
+    instructionsLabel.text = INSTRUCTIONS_2;
   }
 
   public void SetActiveBinding(int bindingIndex, string bindingHandle)
@@ -92,6 +92,4 @@ public class MapperUIScript : MonoBehaviour
       bindings[i].text = key;
     }
   }
-
-
 }

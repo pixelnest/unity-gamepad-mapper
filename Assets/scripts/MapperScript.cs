@@ -180,7 +180,7 @@ public class MapperScript : MonoBehaviour
     switch (bindingIndex)
     {
       case 0:
-        bindingHandle = "Leftstick";
+        bindingHandle = "Left Stick";
         lookForAnalogs = true;
         break;
       case 1:
@@ -199,21 +199,21 @@ public class MapperScript : MonoBehaviour
         bindingHandle = "Start";
         break;
       case 6:
-        bindingHandle = "Back / Select";
+        bindingHandle = "Select / Back";
         break;
       case 7:
-        bindingHandle = "RT / R2";
+        bindingHandle = "Right Trigger / R2";
         lookForAnalogs = true;
         break;
       case 8:
-        bindingHandle = "LT / L2";
+        bindingHandle = "Left Trigger / L2";
         lookForAnalogs = true;
         break;
       case 9:
-        bindingHandle = "RB / R1";
+        bindingHandle = "Right Bumper / R1";
         break;
       case 10:
-        bindingHandle = "LB / L1";
+        bindingHandle = "Left Bumper / L1";
         break;
       case 11:
         bindingHandle = "DPad Up";
