@@ -10,6 +10,8 @@ public class MapperScript : MonoBehaviour
   private const int JOYSTICK_COUNT = 10;
   private const int JOYSTICK_ANALOG_COUNT = 19;
 
+  private static int count = 0;
+
   [Header("UI")]
   public MapperUIScript ui;
 
@@ -21,12 +23,14 @@ public class MapperScript : MonoBehaviour
   private bool lookForAnalogs;
   private string result;
 
+  private Dictionary<string, float> initialAnalogValues;
   private float delayBetweenTwoAnalogs;
 
   void Start()
   {
     joystickId = -1;
     bindingIndex = -1;
+    initialAnalogValues = new Dictionary<string, float>();
 
     result = string.Empty;
     result += Application.platform + "\r\n";
@@ -47,6 +51,11 @@ public class MapperScript : MonoBehaviour
       {
         UpdateDeviceBinding();
       }
+    }
+
+    if (lookForAnalogs == false)
+    {
+      UpdateAnalogValues();
     }
   }
 
@@ -69,6 +78,7 @@ public class MapperScript : MonoBehaviour
         result += "Joystick" + joystickId + "\r\n";
         result += joystickName + "\r\n";
 
+        // Next step
         NextBinding();
       }
       catch (System.Exception)
@@ -98,7 +108,7 @@ public class MapperScript : MonoBehaviour
     // Axes?
     if (lookForAnalogs)
     {
-      var analogs = CheckForAnalogs(joystickId);
+      var analogs = CheckForAnalogs(true, joystickId);
       if (analogs.Count > 0)
       {
         binding = string.Empty;
@@ -128,6 +138,27 @@ public class MapperScript : MonoBehaviour
       result += string.Format("{0} = {1}\r\n", bindingHandle, binding);
 
       NextBinding();
+    }
+  }
+
+  private void UpdateAnalogValues()
+  {
+    initialAnalogValues.Clear();
+
+    // A joystick is moving?
+    for (int i = 1; i <= JOYSTICK_COUNT; i++)
+    {
+      if (joystickId >= 0 && joystickId != i) continue;
+
+      for (int a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
+      {
+        string s = string.Format("joystick {0} analog {1}", i, a);
+
+        // Get current value
+        float f = Input.GetAxis(s);
+
+        initialAnalogValues.Add(s, f);
+      }
     }
   }
 
@@ -221,7 +252,7 @@ public class MapperScript : MonoBehaviour
     return KeyCode.None;
   }
 
-  private List<KeyValuePair<int, int>> CheckForAnalogs(int joystickId = -1)
+  private List<KeyValuePair<int, int>> CheckForAnalogs(bool log = false, int joystickId = -1)
   {
     List<KeyValuePair<int, int>> analogs = new List<KeyValuePair<int, int>>();
 
@@ -233,13 +264,23 @@ public class MapperScript : MonoBehaviour
       for (int a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
       {
         string s = string.Format("joystick {0} analog {1}", i, a);
+
+        // Get current value
         float f = Input.GetAxis(s);
 
+        // Get previous
+        float previousValue = 0f;
+        initialAnalogValues.TryGetValue(s, out previousValue);
+
+        // Value changed & is valid?
         const float DEAD_ZONE = 0.2f;
 
-        if (Mathf.Abs(f) > DEAD_ZONE)
+        if (Mathf.Abs(f) > DEAD_ZONE && previousValue != f)
         {
-          Debug.Log("Analog input detected: " + s + " = " + f);
+          if (log)
+          {
+            Debug.Log("Analog input detected: " + s + " = " + f);
+          }
 
           analogs.Add(new KeyValuePair<int, int>(i, a));
         }
@@ -251,7 +292,9 @@ public class MapperScript : MonoBehaviour
 
   private bool Export()
   {
-    string filename = "./" + joystickName + ".txt";
+    count++;
+
+    string filename = "./" + joystickName + "_" + count + ".txt";
 
     Debug.Log("EXPORT at " + filename);
 
