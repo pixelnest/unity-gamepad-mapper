@@ -95,7 +95,7 @@ public class MapperScript : MonoBehaviour
 
   private void UpdateDeviceBinding()
   {
-    string binding = string.Empty;
+    var binding = string.Empty;
 
     // Skip or restart?
     if (Input.GetKeyDown(KeyCode.Escape))
@@ -156,16 +156,16 @@ public class MapperScript : MonoBehaviour
     initialAnalogValues.Clear();
 
     // A joystick is moving?
-    for (int i = 1; i <= JOYSTICK_COUNT; i++)
+    for (var i = 1; i <= JOYSTICK_COUNT; i++)
     {
       if (joystickId >= 0 && joystickId != i) continue;
 
-      for (int a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
+      for (var a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
       {
-        string s = string.Format("joystick {0} analog {1}", i, a);
+        var s = string.Format("joystick {0} analog {1}", i, a);
 
         // Get current value
-        float f = Input.GetAxis(s);
+        var f = Input.GetAxis(s);
 
         initialAnalogValues.Add(s, f);
       }
@@ -268,22 +268,22 @@ public class MapperScript : MonoBehaviour
 
   private List<KeyValuePair<int, int>> CheckForAnalogs(bool log = false, int joystickId = -1)
   {
-    List<KeyValuePair<int, int>> analogs = new List<KeyValuePair<int, int>>();
+    var analogs = new List<KeyValuePair<int, int>>();
 
     // A joystick is moving?
-    for (int i = 1; i <= JOYSTICK_COUNT; i++)
+    for (var i = 1; i <= JOYSTICK_COUNT; i++)
     {
       if (joystickId >= 0 && joystickId != i) continue;
 
-      for (int a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
+      for (var a = 0; a <= JOYSTICK_ANALOG_COUNT; a++)
       {
-        string s = string.Format("joystick {0} analog {1}", i, a);
+        var s = string.Format("joystick {0} analog {1}", i, a);
 
         // Get current value
-        float f = Input.GetAxis(s);
+        var f = Input.GetAxis(s);
 
         // Get previous
-        float previousValue = 0f;
+        var previousValue = 0f;
         initialAnalogValues.TryGetValue(s, out previousValue);
 
         // Value changed & is valid?
@@ -308,7 +308,7 @@ public class MapperScript : MonoBehaviour
   {
     count++;
 
-    string filename = "./" + joystickName + "_" + count + ".txt";
+    var filename = "./" + joystickName + "_" + count + ".txt";
 
     Debug.Log("EXPORT at " + filename);
 
