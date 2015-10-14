@@ -17,6 +17,7 @@ public class MapperUIScript : MonoBehaviour
 
   public Text devicesLabel;
   public Text instructionsLabel;
+  public Text resultLabel;
 
   [Header("Bindings")]
   public Text[] bindingsHandles;
@@ -27,6 +28,7 @@ public class MapperUIScript : MonoBehaviour
   void Start()
   {
     instructionsLabel.text = INSTRUCTIONS_1;
+    resultLabel.gameObject.SetActive(false);
 
     foreach (var b in bindingsHandles)
     {
@@ -56,6 +58,7 @@ public class MapperUIScript : MonoBehaviour
   {
     devicesLabel.text = deviceId;
     instructionsLabel.text = INSTRUCTIONS_2;
+    resultLabel.gameObject.SetActive(false);
   }
 
   public void SetActiveBinding(int bindingIndex, string bindingHandle)
@@ -91,5 +94,10 @@ public class MapperUIScript : MonoBehaviour
     {
       bindings[i].text = key;
     }
+  }
+
+  public void ShowResult()
+  {
+    resultLabel.gameObject.SetActive(true);
   }
 }

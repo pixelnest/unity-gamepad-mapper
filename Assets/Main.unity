@@ -982,7 +982,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GAMEPAD CONFIGURATOR
+  m_Text: GAMEPAD/CONTROLLER CONFIGURATOR
 --- !u!222 &1045975235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2237,6 +2237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   devicesLabel: {fileID: 2027114258}
   instructionsLabel: {fileID: 1333323055}
+  resultLabel: {fileID: 2102095755}
   bindingsHandles:
   - {fileID: 1639099121}
   - {fileID: 1517273040}
@@ -2831,12 +2832,12 @@ GameObject:
   - 222: {fileID: 2102095756}
   - 114: {fileID: 2102095755}
   m_Layer: 5
-  m_Name: Text - Error
+  m_Name: Text - Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2102095754
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2866,9 +2867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: .286764681, b: .390060663, a: 1}
+  m_Color: {r: .548338592, g: .838235259, b: .160250857, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9c75c73bbd86444ae83a6ff31b23bd63, type: 3}
+    m_Font: {fileID: 12800000, guid: 11eb5b96cba494c0f815c4e96978d5ca, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -2879,7 +2880,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ERROR ERROR ERROR
+  m_Text: Send the generated text file to <b>STEREDENN@PIXELNEST.IO</b> :)
 --- !u!222 &2102095756
 CanvasRenderer:
   m_ObjectHideFlags: 0

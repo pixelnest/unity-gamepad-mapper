@@ -241,6 +241,7 @@ public class MapperScript : MonoBehaviour
         // Over
         if (Export())
         {
+          ui.ShowResult();
           Application.Quit();
         }
         break;
