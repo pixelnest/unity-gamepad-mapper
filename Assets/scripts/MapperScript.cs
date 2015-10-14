@@ -126,8 +126,9 @@ public class MapperScript : MonoBehaviour
         delayBetweenTwoAnalogs = 0.75f;
       }
     }
-    // Key?
-    else
+
+    // Key? Even for analog
+	if (string.IsNullOrEmpty(binding))
     {
       var key = CheckForKey(joystickId.ToString());
       if (key != KeyCode.None)
