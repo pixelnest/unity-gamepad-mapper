@@ -1,4 +1,4 @@
-# Unity game mapper
+# Unity controller Mapper
 
 A small Unity program to get bindings and machine name from any controller.
 
